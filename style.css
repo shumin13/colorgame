@@ -1,0 +1,31 @@
+.colorText {
+  width: 400px;
+  height: 200px;
+  margin: 140px auto auto auto;
+  display: block;
+  font-family: 'Merienda One', cursive;
+  font-size: 80px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+button {
+  width: 190px;
+  height: 40px;
+  margin: 10px auto;
+  display: block;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 17px;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: white;
+  border: 1px solid black;
+  outline: none;
+}
+
+p {
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 25px;
+  font-weight: bold;
+  margin: 0 auto;
+}
