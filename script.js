@@ -14,6 +14,10 @@ startButton.textContent = 'Start'
 document.body.appendChild(startButton)
 startButton.addEventListener('click', removeStartButton)
 
+instruction = document.createElement('div')
+instruction.textContent = 'Instruction: Click the oval shape when the word in the oval matches the page background colour. 1 point for each correct answer and -1 point for each incorrect answer. Maximum score is 5. Press start to begin.'
+document.body.appendChild(instruction)
+
 function randomColor () {
   return color[Math.floor(Math.random() * color.length)]
 }
@@ -38,14 +42,15 @@ function randomTextBackground () {
 
 function removeStartButton () {
   startButton.parentNode.removeChild(startButton)
+  instruction.parentNode.removeChild(instruction)
 }
 
 startButton.addEventListener('click', function () {
-  randomBackgroundColorInterval = setInterval(randomBackgroundColor, 1000)
+  randomBackgroundColorInterval = setInterval(randomBackgroundColor, 1200)
 })
 
 startButton.addEventListener('click', function () {
-  randomTextInterval = setInterval(randomText, 1000)
+  randomTextInterval = setInterval(randomText, 1200)
 })
 
 // startButton.addEventListener('click', function () {
@@ -53,7 +58,7 @@ startButton.addEventListener('click', function () {
 // })
 
 startButton.addEventListener('click', function () {
-  randomTextBackgroundInterval = setInterval(randomTextBackground, 1000)
+  randomTextBackgroundInterval = setInterval(randomTextBackground, 1200)
 })
 
 colorText.addEventListener('click', checkAnswer)
@@ -85,9 +90,9 @@ function gameOver () {
 
 function newGame () {
   restartButton.parentNode.removeChild(restartButton)
-  randomBackgroundColorInterval = setInterval(randomBackgroundColor, 1000)
-  randomTextInterval = setInterval(randomText, 1000)
-  randomTextBackgroundInterval = setInterval(randomTextBackground, 1000)
+  randomBackgroundColorInterval = setInterval(randomBackgroundColor, 1200)
+  randomTextInterval = setInterval(randomText, 1200)
+  randomTextBackgroundInterval = setInterval(randomTextBackground, 1200)
   score = 0
   scoreboard.textContent = score
 }
